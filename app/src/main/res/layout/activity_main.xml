@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F0F1A">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- Titre -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COMPTEUR MVVM"
+            android:textColor="#BB86FC"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Carte circulaire compteur -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="130dp"
+            app:cardBackgroundColor="#1E1E2E"
+            app:cardElevation="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Neutre"
+                    android:textColor="#BB86FC"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="80sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Historique : --"
+                    android:textColor="#888888"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Boutons + et - cote a cote -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnDecrement"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="-"
+                android:textSize="36sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#CF6679"
+                android:layout_marginEnd="20dp"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+            <Button
+                android:id="@+id/btnIncrement"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="+"
+                android:textSize="36sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#03DAC6"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+        </LinearLayout>
+
+        <!-- Selecteur de pas -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAS D'INCREMENTATION"
+            android:textColor="#888888"
+            android:textSize="11sp"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btnStep1"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:text="+1"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#3700B3"
+                android:layout_marginEnd="8dp"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+            <Button
+                android:id="@+id/btnStep5"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:text="+5"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#3700B3"
+                android:layout_marginEnd="8dp"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+            <Button
+                android:id="@+id/btnStep10"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:text="+10"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#3700B3"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+        </LinearLayout>
+
+        <!-- Bouton Reset -->
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:text="REINITIALISER"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1E1E2E"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <!-- Bouton thread background -->
+        <Button
+            android:id="@+id/btnBackground"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:text="THREAD BACKGROUND +1"
+            android:textColor="#BB86FC"
+            android:backgroundTint="#1E1E2E"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    </LinearLayout>
+</ScrollView>
